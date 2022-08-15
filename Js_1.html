@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html lang="kr">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Fabaneon">
+    <title>Javascript - "CSS"</title>
+      <style>
+      /* 이름(class)이 js인 태그로 감싸져있는 텍스트의 스타일을 지정하는 구문*/
+          .js{
+            color:red;
+            font-weight:bold;
+          }
+          .mainidea{
+            background-color:darkblue;
+            opacity: 0.5;
+          }
+      /* id가 first, headline인 태그로 감싸져있는 텍스트의 스타일을 지정하는 구문 */
+          #first{
+            color:green;
+            font-size:28px;
+          }
+          #headline{
+            color: yellow;
+            opacity: 0.8;
+            font-weight:bold;
+          }
+          /* 해당 페이지에 존재하는 모든 section, article, p태그의 스타일을 지정하는 구문 */
+          hr{
+            background-color: black;
+            color: green;
+            opacity: 0.9;
+          }
+          section{
+            background-color: white;
+          }
+          article{
+            font-size:20px;
+          }
+          p{
+            font-size:16px;
+          }
+      /* 처리 우선순위는 당연히 id가 최우선이며 그다음으로 class 마지막으로 태그이다. */
+      </style>
+  </head>
+  <body>
+
+    <header>
+      <h1 style="background-color:grey;color:white;">Javascript - CSS 기초</h1>
+      <h4>커리큘럼 진행을 위한 약간의 문법을 배워봅니다.</h4>
+    </header>
+    <hr>
+    <section>
+      <div id="headline" class="mainidea">CSS 기초 문법 몇가지</div>
+      <p>
+        <strong>관련 속성 정의</strong><br>
+
+          <ul>
+            <p>
+              <li style="color:blue;">id</li><br>
+              그 페이지에서 중복되지않는, 하나만 존재하는 고유값 <br>
+            </p>
+
+            <p>
+              <li style="color:orange;">class</li><br>
+              특정 태그들을 묶어주는 그룹핑목적의 속성, 중복 사용 가능.<br>
+            </p>
+            <p>
+              <li style="color:orange;">style</li><br>
+              태그로 묶어진 대상의 스타일을 지정하는 속성.<br>
+            </p>
+          </ul>
+
+          <p>
+
+            style="background-color:grey;color:white;"<br>
+            배경색 -> 회색 ;[속성값 구분 콜론] 색상 -> 흰색 <br>
+
+          </p>
+
+
+      </p>
+    </section>
+    <hr>
+    <section>
+      <article>
+        <div id="headline" class="mainidea">Html + css | 본문 Edit 해보기</div>
+        <p>
+
+          <span id="first" style="font-weight:bold;">Javascript</span>는 Ecma International의 프로토타입 기반의 프로그래밍 언어로, 스크립트 언어에 해당된다.<br>
+          특수한 목적이 아닌 이상 모든 웹 브라우저에 인터프리터가 내장되어 있다.<br>
+          오늘날 <span class="js">HTML</span>, CsSS와 함께 웹을 구성하는 요소 중 하나다.<br>
+          <!-- 태그 이름이 js 이다 라는 의미 -->
+          <span class="js">HTML</span>이 웹 페이지의 기본 구조를 담당하고, CSS가 디자인을 담당한다면 JavaScript는 클라이언트 단에서 웹 페이지가 동작하는 것을 담당한다.<br>
+          웹 페이지를 자동차에 비유하자면, <span class="js">HTML</span>은 자동차의 뼈대, CSS는 자동차의 외관, JavaScript는 자동차의 동력이라고 볼 수 있다.<br>
+          <br>
+          썬 마이크로시스템즈(현재 오라클)에서 개발한 Java와는 별 관계가 없는 언어이다.<br>
+          이름이 비슷하다고 같은 언어가 아니다.<br>
+          <br>
+          사람들이 흔히 헷갈리는 부분 중 하나라 Java의 소유자인 오라클에서도 아니라고 강조한다.<br>
+          실질적인 구동 방식도 Java Virtual Machine을 이용해서 돌리는 Java와, 브라우저 내에 스크립트 엔진(인터프리터)이 존재하는 JavaScript는 완전히 다르다.<br>
+          햄이랑 햄스터가 다르고 파와 파슬리가 다르며, 인도가 인도네시아와 다르듯 심지어는 웹 서버용 파생 규격도 다르다.<br>
+
+        </p>
+
+
+      </article>
+
+    </section>
+
+  </body>
+
+</html>
