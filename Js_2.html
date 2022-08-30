@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="utf-8">
+      <meta name="author" content="Fabaneon">
+      <meta name="description" content=" 
+      주간모드 & 야간모드 기능 만들기
+      ">
+      <title>JavaScript - 제어할 태그 선택하기</title>
+      <style>
+
+        #title{
+          background-color:grey;
+          color: white;
+          font-weight: !important;
+          font-weight: bolder;
+        }
+
+        #important{
+          color: indianred;
+          font-weight: bolder;
+          font-size: 12;
+        }
+      </style>
+
+
+
+    </head>
+  <body>
+    
+    <section>
+      <h1 id="title">JavaScript - 제어할 태그 선택하기</h1>
+      <article>
+        <p>
+          특정 태그의 스타일을 JavaScript + Css 를 이용해 지정해보자.
+        </p>  
+      </article>    
+    </section>
+    <input type="button" value="night" onclick="
+     document.querySelector('body').style.color = 'white';
+     document.querySelector('body').style.backgroundColor = 'black';
+     document.querySelector('#important').style.color = 'yellow';
+    ">
+    <input type="button" value="day" onclick="
+     document.querySelector('body').style.color = 'black';
+     document.querySelector('body').style.backgroundColor = 'white';
+     document.querySelector('#important').style.color = 'indianred';
+    ">
+    <hr>
+    <main>
+      <h3 id="title">예시용 본문</h3>
+      <p>
+        <span id="important">JavaScript</span>는 객체 기반 의 스크립트 프로그래밍 언어 이다. <br>
+        이 언어는 웹 브라우저 내에서 주로 사용하며,<br> 다른 응용 프로그램의 내장 객체에도 접근할 수 있는 기능을 가지고 있다.<br> 또한 <span id="important">Node.js</span> 와 같은 런타임 환경과 같이 서버 프로그래밍에도 사용되고 있다.<br>
+      </p>
+      <!-- 왜 id or class 스타일 지정시에는 동시 선택후 적용이 안되는것인가?  -->
+      <!-- id 이름 important [Javascript는 변경 But Node.js 는 변경 x ]  -->
+      <h3 id="title">-</h3>
+    </main>
+
+  </body>
+
+</html>
