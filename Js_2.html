@@ -3,7 +3,7 @@
     <head>
       <meta charset="utf-8">
       <meta name="author" content="Fabaneon">
-      <meta name="description" content=" 
+      <meta name="description" content="
       주간모드 & 야간모드 기능 만들기
       ">
       <title>JavaScript - 제어할 태그 선택하기</title>
@@ -27,25 +27,25 @@
 
     </head>
   <body>
-    
+
     <section>
       <h1 id="title">JavaScript - 제어할 태그 선택하기</h1>
       <article>
         <p>
           특정 태그의 스타일을 JavaScript + Css 를 이용해 지정해보자.
-        </p>  
-      </article>    
+        </p>
+      </article>
     </section>
-    <input type="button" value="night" onclick="
-     document.querySelector('body').style.color = 'white';
-     document.querySelector('body').style.backgroundColor = 'black';
-     document.querySelector('#important').style.color = 'yellow';
-    ">
-    <input type="button" value="day" onclick="
-     document.querySelector('body').style.color = 'black';
-     document.querySelector('body').style.backgroundColor = 'white';
-     document.querySelector('#important').style.color = 'indianred';
-    ">
+      <input type="button" value="night" onclick="
+       document.querySelector('body').style.color = 'white';
+       document.querySelector('body').style.backgroundColor = 'black';
+       document.querySelector('#important').style.color = 'yellow';
+      ">
+      <input type="button" value="day" onclick="
+       document.querySelector('body').style.color = 'black';
+       document.querySelector('body').style.backgroundColor = 'white';
+       document.querySelector('#important').style.color = 'indianred';
+      ">
     <hr>
     <main>
       <h3 id="title">예시용 본문</h3>
@@ -55,6 +55,7 @@
       </p>
       <!-- 왜 id or class 스타일 지정시에는 동시 선택후 적용이 안되는것인가?  -->
       <!-- id 이름 important [Javascript는 변경 But Node.js 는 변경 x ]  -->
+      <!-- 2022-08-31 해당 문제에 대한 해답은 Js_3에서 해경하였음. [Solved] -->
       <h3 id="title">-</h3>
     </main>
 
