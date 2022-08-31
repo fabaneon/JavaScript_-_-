@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Fabaneon">
+    <meta name="description" content="
+    조건문 사용 예제 & 리팩토링 - 코드 최적화 그리고 변수의 활용
+    ">
+    <title>JavaScript - 조건문 문법</title>
+
+    <style>
+      #title{
+        color: white;
+        background-color: grey;
+        font-weight: bolder;
+      }
+
+      #important{
+        color: green;
+        font-weight: bolder;
+        font-size: 12;
+      }
+
+    </style>
+    <!-- 전역 변수 선언 -->
+    <script type="text/javascript">
+
+      var title_color = document.querySelectorAll('#title');
+      var title_bgcolor = document.querySelectorAll('#title');
+      var body = document.querySelector('body');
+
+    </script>
+  </head>
+  <hr>
+  <body>
+
+    <section>
+
+      <h1 id="title">JavaScript - 조건문 문법 (Comparison Operator & Boolean)</h1>
+      <p>
+        <!--
+
+          Js_2의 문제에 대한 해답
+
+            일반 쿼리 셀렉터는 id 혹은 클래스값이 일치하는 첫번째 요소만 지정함.
+            따라서 쿼리셀렉터all을 사용하여 변수에 해당 요소값을 저장 후 반복 실행해줘야 함.
+
+          예시는 아래 야간,주간모드 버튼과 같음
+         -->
+
+        <input type="button" value="Night Mode" onclick="
+
+        if(this.value === 'Night Mode'){
+
+          this.value = 'Day Mode';
+          body.style.backgroundColor = 'black';
+          body.style.color = 'white';
+
+          var title_color = document.querySelectorAll('#title');
+          var title_bgcolor = document.querySelectorAll('#title');
+
+
+          for ( var i = 0; i < title_color.length; i++){
+            title_color[i].style.color = 'yellow';
+            title_bgcolor[i].style.backgroundColor = 'black'
+          }
+
+
+        }
+        else{
+
+          this.value = 'Night Mode';
+          body.style.backgroundColor = 'white';
+          body.style.color = 'black';
+
+          var title_color = document.querySelectorAll('#title');
+          var title_bgcolor = document.querySelectorAll('#title');
+
+
+          for ( var i = 0; i < title_color.length; i++){
+            title_color[i].style.color = 'white';
+            title_bgcolor[i].style.backgroundColor = 'grey'
+          }
+        }
+        ">
+        <!-- 주간&야간모드 버튼에서의 문제.
+              전역 변수를 선언했음에도
+              조건문 하위 구문에서는 해당 변수가 선언되지 않았다고 인식하는가?
+
+              -> 조건문 안에서 변수를 각각 선언해주지 않으면
+              타이틀 색상 변경 기능이 작동하지 않음
+       -->
+
+        <br>
+        <span id="important"><u>관련 강의 링크</u><br></span>
+        <ul>
+          <li>
+            <a target="_blank" href="https://opentutorials.org/course/3085/18798" title="오픈튜토리얼 Web2 | 비교연산자와 Boolean">기초 개념 강의</a><br>
+          </li>
+          <li>
+            <a target="_blank" href="https://opentutorials.org/course/3085/18800" title="오픈튜토리얼 Web2 | 조건문 문법">조건문 문법 강의</a><br>
+          </li>
+          <li>
+            <a target="_blank" href="https://opentutorials.org/course/3085/18801" title="오픈튜토리얼 Web2 | 리팩토링 중복의 제거">리팩토링(This & 변수선언의 활용)</a><br>
+          </li>
+        </ul>
+
+      </p>
+
+    </section>
+
+    <hr>
+    <section>
+      <h1 id="title">조건문 예제</h1>
+      <p>
+        <span id="important">조건문에 대한 간단한 설명</span><br>
+
+            기존 쿼리셀렉터 이후의 속성값 지정방식을 다양하게 사용 가능.<br>
+            .value or .type 등 기존 태그에 들어가는 속성값들은 대부분 가능하다.<br>
+            거기에다 쿼리셀렉터로 요소를 지정하는 구문 자체가 하나의 변수임으로
+            연산자들 역시 사용이 가능하다.<br>
+      <h3 id="title">추가 지식</h3>
+        <span id="important">This</span><br>
+            JavaScript에 있는 변수로 하위 요소가 상위 요소를 지정할때 <br>
+            This를 이용하여 <span id="important">리팩토링(Refactoring)</span>이 가능하다.<br>
+            중복을 최대한 제거한다는 의미이다.<br>
+      </p>
+
+
+
+      <h2>IF - TRUE</h2>
+      <script type="text/javascript">
+
+        document.write("1<br>")
+
+        if(true){
+          document.write("2<br>")
+        }
+
+        else {
+          document.write("3<br>")
+        }
+        document.write("4<br>")
+      </script>
+
+
+      <h2>IF - FALSE</h2>
+      <script type="text/javascript">
+
+        document.write("1<br>")
+
+        if(false){
+          document.write("2<br>")
+        }
+
+        else {
+          document.write("3<br>")
+        }
+
+        document.write("4<br>")
+      </script>
+
+
+    </section>
+
+  </body>
+
+</html>
