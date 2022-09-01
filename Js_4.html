@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Fabaneon">
+    <meta name="description" content="배열과 반복문 심화 학습">
+    <title>JavaScript - Array & Loop</title>
+    <style>
+
+      #title{
+        color: white;
+        background-color: grey;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <hr>
+    <section>
+      <h1 id = "title">JavaScript - 배열 & 반복문</h1>
+
+
+    </section>
+    <hr>
+    <section>
+      <h3 id = "title">Syntax</h3>
+      <script>
+        var coworkers = ["Fabaneon", "nejukmaster"];
+        document.write('var coworkers = ["Fabaneon", "nejukmaster"];<br>');
+      </script>
+
+      <h3 id = "title">get</h3>
+        결과값 <br>
+      <script>
+        for(var i=0; i < coworkers.length; i++){
+          document.write('<li>'+coworkers[i]+'</li>');
+        };
+        document.write(coworkers.length);
+      </script>
+
+       <h3 id = "title">add</h3>
+         결과값 <br>
+      <script >
+        var i = 0;
+        coworkers.push("Denver");
+        coworkers.push("GodorHuman");
+
+        while(i < coworkers.length){
+          document.write('<li>'+coworkers[i]+'</li>')
+          i++;
+        }
+
+      </script>
+
+    </section>
+  </body>
+  <!-- 시간관계상 하지 못한것  -->
+  <!-- Index 문서에 있는 각 예제 문서 링큳들을 수동으로 추가하고있었다. -->
+  <!-- 이제는 그것이 아닌 예제 문서 이름 양식에 맞춰 추가하기만 하면 알아서 링크를 추가해주는 -->
+  <!-- 기능을 만들고 싶다. -->
+  <!-- 필요하다고 생각되는것 -->
+  <!-- 로컬 파일에서 특정 파일명 검색 후 문자열 데이터로 받아오는것. -->
+  <!-- 각 문서들의 title 이름값만 index 문서에서 받아온 후 a태그의 텍스트로 추가 표시하는것. -->
+</html>
