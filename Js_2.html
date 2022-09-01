@@ -39,12 +39,20 @@
       <input type="button" value="night" onclick="
        document.querySelector('body').style.color = 'white';
        document.querySelector('body').style.backgroundColor = 'black';
-       document.querySelector('#important').style.color = 'yellow';
+
+       var important = document.querySelectorAll('#important');
+       for(var i = 0; i < important.length; i++){
+         important[i].style.color = 'green';
+       }
       ">
       <input type="button" value="day" onclick="
        document.querySelector('body').style.color = 'black';
        document.querySelector('body').style.backgroundColor = 'white';
-       document.querySelector('#important').style.color = 'indianred';
+
+       var important = document.querySelectorAll('#important');
+       for(var i = 0; i < important.length; i++){
+         important[i].style.color = 'indianred';
+       }
       ">
     <hr>
     <main>
@@ -56,6 +64,7 @@
       <!-- 왜 id or class 스타일 지정시에는 동시 선택후 적용이 안되는것인가?  -->
       <!-- id 이름 important [Javascript는 변경 But Node.js 는 변경 x ]  -->
       <!-- 2022-08-31 해당 문제에 대한 해답은 Js_3에서 해경하였음. [Solved] -->
+      <!-- 해결된 내용으로 구문 변경 2022-09-01 -->
       <h3 id="title">-</h3>
     </main>
 
