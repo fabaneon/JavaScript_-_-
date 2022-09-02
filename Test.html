@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="kr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>구문 테스트용</title>
+  </head>
+  <body>
+    <h1>구문 테스트용 문서입니다.</h1>
+
+
+
+    <h3 id = "important">더하기 계산</h3>
+
+    <input type="number" id ="n1" placeholder="N"> +
+    <input type="number" id ="n2" placeholder="N"> =
+    <span id="result"></span><br>
+    <button type = "button" onclick="sum()"> Result </button> <br>
+
+    <script>
+
+      function sum(){
+        let n1 = document.getElementById('n1').value;
+        let n2 = document.getElementById('n2').value;
+        let result = Number(n1) + Number(n2) ;
+        document.getElementById("result").innerHTML = result ;
+
+      }
+
+
+
+    </script>
+
+
+  </body>
+</html>

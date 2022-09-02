@@ -25,8 +25,6 @@
     <!-- 전역 변수 선언 -->
     <script type="text/javascript">
 
-      var title_color = document.querySelectorAll('#title');
-      var title_bgcolor = document.querySelectorAll('#title');
       var body = document.querySelector('body');
 
     </script>
@@ -56,13 +54,13 @@
           body.style.backgroundColor = 'black';
           body.style.color = 'white';
 
-          var title_color = document.querySelectorAll('#title');
-          var title_bgcolor = document.querySelectorAll('#title');
+          var title = document.querySelectorAll('#title');
 
 
-          for ( var i = 0; i < title_color.length; i++){
-            title_color[i].style.color = 'yellow';
-            title_bgcolor[i].style.backgroundColor = 'black'
+
+          for ( var i = 0; i < title.length; i++){
+            title[i].style.color = 'yellow';
+            title[i].style.backgroundColor = 'black'
           }
 
 
@@ -73,13 +71,12 @@
           body.style.backgroundColor = 'white';
           body.style.color = 'black';
 
-          var title_color = document.querySelectorAll('#title');
-          var title_bgcolor = document.querySelectorAll('#title');
+          var title = document.querySelectorAll('#title');
 
 
-          for ( var i = 0; i < title_color.length; i++){
-            title_color[i].style.color = 'white';
-            title_bgcolor[i].style.backgroundColor = 'grey'
+          for ( var i = 0; i < title.length; i++){
+            title[i].style.color = 'white';
+            title[i].style.backgroundColor = 'grey'
           }
         }
         ">
