@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="kr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>구문 테스트용</title>
+  </head>
+  <body>
+    <h1>구문 테스트용 문서입니다.</h1>
+
+
+
+    <h3 id = "important">객체에서 값 가져와 배열 생성</h3>
+    <div id="print"></div>
+    <script>
+    function makeArrIn_cnt_id_quote(list) {
+      let newArr = [];
+
+      for (i = 0; i < Object.keys(list).length; i++) {
+        let key = Object.keys(list)[i];
+        let value = Object.values(list)[i];
+        newArr.push({ count: value, id: Number(key), quote: "" });
+      }
+
+      console.log(newArr);
+      return newArr;
+    }
+    var a = {
+      "1":"A_2",
+      "2":"A_3",
+      "3":"A_1",
+      "4":"B_1",
+      "5":"B_2"
+    };
+    document.write("obj: %o"+'<br>',a);
+    document.write(makeArrIn_cnt_id_quote(a));
+    </script>
+
+
+  </body>
+</html>

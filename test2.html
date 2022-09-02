@@ -2,28 +2,19 @@
 <html>
 
 <body>
-
-  <h4>
-      Change the text of the text field
-      ,and then click the button.
-  </h4>
-
-  <label for="domTextElement">Name: </label>
-  <input type="text" id="domTextElement" >
-
-  <button type="button"  onclick="sum()">
-      click me!!
-  </button>
-
-  <p id="valueInput"></p>
-
   <script>
-
-    function sum() {
-      let inputValue = document.getElementById("domTextElement").value;
-      document.getElementById("valueInput").innerHTML = inputValue;
+    var a = {
+      "A":"A_2",
+      "B":"A_3",
+      "C":"A_1",
+      "D":"B_1",
+      "E":"B_2"
+    };
+    var i = 0;
+    for (var key in a ) {
+      document.write(key+' : ' +a[key]+"<br>")
+      i++;
     }
-
   </script>
 </body>
 
