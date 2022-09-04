@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<!-- Memberlist 라는 DB 속에 팀원 정보를 저장해두고 조건에 맞게끔 출력하는 코드 -->
+<!-- 여기에 추가or수정팀원정보와 찾고자하는 정보를 INPUT값으로 변경해주면 간단한 DB 시스템이 된다. -->
+<!-- 추가는 .push로 넣어주고 length를 측정하여 + 1 한값을 새로운 id로 부여한다. -->
+<!-- 수정은 기존 정보 찾기 기능으로 요소를 특정짓고 이를 입력값으로 재배정하면 된다. -->
+<body>
+  TeamMember <br>
+  <script>
+    let memberlist = [
+      {id: 1, team:"A_team", name:  "Fabaneon"},
+      {id: 2, team:"A_team", name:  "NejukMaster"},
+      {id: 3, team:"A_team", name:  "2001GopnikGuy"},
+      {id: 4, team:"A_team", name:  "Tanso5607"},
+      {id: 5, team:"B_team", name:  "Denver"},
+      {id: 6, team:"B_team", name:  "GodorHuman"},
+      {id: 7, team:"B_team", name:  "Clonejhs"}
+    ];
+
+    console.log(memberlist);
+    let lis = '';
+    for (var i = 0; i < memberlist.length; i++){
+      lis += "<li>" + memberlist[i].team + ' : ' + memberlist[i].name + "</li>" ;
+    }
+    document.write(lis);
+  </script>
+  <hr>
+  A_Team Member <br>
+  <script>
+  let lisA = '';
+  for (var i = 0; i < memberlist.length; i++){
+    if (memberlist[i].team ==="A_team") {
+      lisA += "<li>" + memberlist[i].team + ' : ' + memberlist[i].name + "</li>" ;
+    }
+    else {
+    }
+  }
+  document.write(lisA);
+  console.log("lisA : " + lisA);
+  </script>
+
+  <hr>
+  B_Team Member <br>
+  <script>
+  let lisB = '';
+  for (var i = 0; i < memberlist.length; i++){
+    if (memberlist[i].team ==="B_team") {
+      lisB += "<li>" + memberlist[i].team + ' : ' + memberlist[i].name + "</li>" ;
+    }
+    else {
+    }
+  }
+  document.write(lisB);
+  console.log("lisA : " + lisB);
+  </script>
+
+
+</body>
+
+</html>

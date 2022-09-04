@@ -2,20 +2,57 @@
 <html>
 
 <body>
+  TeamMember <br>
   <script>
-    var a = {
-      "A":"A_2",
-      "B":"A_3",
-      "C":"A_1",
-      "D":"B_1",
-      "E":"B_2"
-    };
-    var i = 0;
-    for (var key in a ) {
-      document.write(key+' : ' +a[key]+"<br>")
-      i++;
+    let memberlist = [
+      {id: 1, team:"A_team", name:  "Fabaneon"},
+      {id: 2, team:"A_team", name:  "NejukMaster"},
+      {id: 3, team:"A_team", name:  "2001GopnikGuy"},
+      {id: 4, team:"A_team", name:  "Tanso5607"},
+      {id: 5, team:"B_team", name:  "Denver"},
+      {id: 6, team:"B_team", name:  "GodorHuman"},
+      {id: 7, team:"B_team", name:  "Clonejhs"}
+    ];
+
+    console.log(memberlist);
+    let lis = '';
+    for (var i = 0; i < memberlist.length; i++){
+      lis += "<li>" + memberlist[i].team + ' : ' + memberlist[i].name + "</li>" ;
     }
+    document.write(lis);
   </script>
+  <hr>
+  A_Team Member <br>
+  <script>
+  let lisA = '';
+  for (var i = 0; i < memberlist.length; i++){
+    if (memberlist[i].team ==="A_team") {
+      lisA += "<li>" + memberlist[i].team + ' : ' + memberlist[i].name + "</li>" ;
+    }
+    else {
+    }
+  }
+  document.write(lisA);
+  console.log("lisA : " + lisA);
+  </script>
+
+  <hr>
+  B_Team Member <br>
+  <script>
+  let lisB = '';
+  for (var i = 0; i < memberlist.length; i++){
+    if (memberlist[i].team ==="B_team") {
+      lisB += "<li>" + memberlist[i].team + ' : ' + memberlist[i].name + "</li>" ;
+    }
+    else {
+    }
+  }
+  document.write(lisB);
+  console.log(memberlist[0].id);
+  console.log("lisA : " + lisB);
+  </script>
+
+
 </body>
 
 </html>
